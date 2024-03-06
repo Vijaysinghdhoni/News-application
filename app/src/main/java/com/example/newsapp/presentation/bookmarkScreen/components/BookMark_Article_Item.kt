@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.bookmark.components
+package com.example.newsapp.presentation.bookmarkScreen.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement

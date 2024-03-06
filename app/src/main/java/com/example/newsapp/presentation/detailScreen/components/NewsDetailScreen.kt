@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.detailScreen
+package com.example.newsapp.presentation.detailScreen.components
 
 import android.content.Intent
 import android.net.Uri
@@ -30,7 +30,6 @@ import com.bumptech.glide.integration.compose.placeholder
 import com.example.newsapp.R
 import com.example.newsapp.data.model.Article
 import com.example.newsapp.presentation.bookmarkScreen.viewmodel.BookMarkViewModel
-import com.example.newsapp.presentation.detailScreen.components.DetailTopAppBar
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable

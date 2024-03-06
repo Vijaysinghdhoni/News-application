@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.top_headlinesScreen
+package com.example.newsapp.presentation.top_headlinesScreen.viewmodel
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
@@ -7,6 +7,8 @@ import androidx.lifecycle.viewModelScope
 import com.example.newsapp.comman.Resource
 import com.example.newsapp.domain.use_case.getTopHedlines.GetPagerTopHeadlinesUseCase
 import com.example.newsapp.domain.use_case.getTopHedlines.GetTopHeadLinesUseCase
+import com.example.newsapp.presentation.top_headlinesScreen.PagerScreenState
+import com.example.newsapp.presentation.top_headlinesScreen.TopHeadLinesScreenState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach

@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.bookmarkScreen
+package com.example.newsapp.presentation.bookmarkScreen.viewmodel
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.newsapp.data.model.Article
 import com.example.newsapp.domain.use_case.db_usecases.GetSavedArticleUseCase
 import com.example.newsapp.domain.use_case.db_usecases.SaveArticlesUseCase
+import com.example.newsapp.presentation.bookmarkScreen.BookMarkScreenState
 import com.example.newsapp.presentation.detailScreen.DetailScreenState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.launchIn

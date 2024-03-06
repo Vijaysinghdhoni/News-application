@@ -1,7 +1,6 @@
-package com.example.newsapp.presentation.bookmark
+package com.example.newsapp.presentation.bookmarkScreen
 
 import com.example.newsapp.data.model.Article
-import com.example.newsapp.data.model.Articles
 
 data class BookMarkScreenState(
     val articles : List<Article> = emptyList(),

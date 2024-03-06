@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.detail
+package com.example.newsapp.presentation.detailScreen
 
 data class DetailScreenState(
     val isSaved: Boolean = false,
