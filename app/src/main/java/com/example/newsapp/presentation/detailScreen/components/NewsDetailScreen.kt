@@ -1,4 +1,4 @@
-package com.example.newsapp.presentation.detail
+package com.example.newsapp.presentation.detailScreen
 
 import android.content.Intent
 import android.net.Uri
@@ -14,7 +14,6 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -22,7 +21,6 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -31,9 +29,8 @@ import com.bumptech.glide.integration.compose.GlideImage
 import com.bumptech.glide.integration.compose.placeholder
 import com.example.newsapp.R
 import com.example.newsapp.data.model.Article
-import com.example.newsapp.data.model.dto.Source
-import com.example.newsapp.presentation.bookmark.BookMarkViewModel
-import com.example.newsapp.presentation.detail.components.DetailTopAppBar
+import com.example.newsapp.presentation.bookmarkScreen.viewmodel.BookMarkViewModel
+import com.example.newsapp.presentation.detailScreen.components.DetailTopAppBar
 
 @OptIn(ExperimentalGlideComposeApi::class)
 @Composable

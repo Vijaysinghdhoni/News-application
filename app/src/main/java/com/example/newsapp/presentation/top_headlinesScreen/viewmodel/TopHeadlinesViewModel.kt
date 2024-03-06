@@ -1,11 +1,9 @@
-package com.example.newsapp.presentation.top_headlines
+package com.example.newsapp.presentation.top_headlinesScreen
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.newsapp.comman.Constants
 import com.example.newsapp.comman.Resource
 import com.example.newsapp.domain.use_case.getTopHedlines.GetPagerTopHeadlinesUseCase
 import com.example.newsapp.domain.use_case.getTopHedlines.GetTopHeadLinesUseCase
