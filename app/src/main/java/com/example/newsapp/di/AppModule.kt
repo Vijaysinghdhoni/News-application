@@ -8,6 +8,9 @@ import com.example.newsapp.data.local.NewsDao
 import com.example.newsapp.data.remote.NewsApiService
 import com.example.newsapp.data.repository.NewsRepositoryImpl
 import com.example.newsapp.domain.repository.NewsRepository
+import com.example.newsapp.domain.use_case.db_usecases.DeleteArticleUseCase
+import com.example.newsapp.domain.use_case.db_usecases.GetSavedArticleUseCase
+import com.example.newsapp.domain.use_case.db_usecases.SaveArticlesUseCase
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -56,5 +59,22 @@ class AppModule {
         return NewsRepositoryImpl(newsApiService, newsDao)
     }
 
+    @Singleton
+    @Provides
+    fun providesGetSavedArticleUseCase(repository: NewsRepository): GetSavedArticleUseCase {
+        return GetSavedArticleUseCase(repository)
+    }
+
+    @Singleton
+    @Provides
+    fun provideSavedrticleUseCase(repository: NewsRepository): SaveArticlesUseCase {
+        return SaveArticlesUseCase(repository)
+    }
+
+    @Singleton
+    @Provides
+    fun providesDeleteArticleUseCase(repository: NewsRepository): DeleteArticleUseCase {
+        return DeleteArticleUseCase(repository)
+    }
 }
 

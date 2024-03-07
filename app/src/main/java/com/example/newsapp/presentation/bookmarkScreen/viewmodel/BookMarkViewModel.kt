@@ -4,6 +4,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.newsapp.data.model.Article
+import com.example.newsapp.domain.use_case.db_usecases.DeleteArticleUseCase
 import com.example.newsapp.domain.use_case.db_usecases.GetSavedArticleUseCase
 import com.example.newsapp.domain.use_case.db_usecases.SaveArticlesUseCase
 import com.example.newsapp.presentation.bookmarkScreen.BookMarkScreenState
@@ -17,7 +18,8 @@ import javax.inject.Inject
 @HiltViewModel
 class BookMarkViewModel @Inject constructor(
     private val getSavedArticleUseCase: GetSavedArticleUseCase,
-    private val saveArticlesUseCase: SaveArticlesUseCase
+    private val saveArticlesUseCase: SaveArticlesUseCase,
+    private val deleteArticleUseCase: DeleteArticleUseCase
 ) :
     ViewModel() {
 
@@ -45,6 +47,14 @@ class BookMarkViewModel @Inject constructor(
     }
 
     fun deleteArticles(article: Article) {
+        viewModelScope.launch {
+            deleteArticleUseCase.delete(article)
+            savedArticlesState.value = savedArticlesState.value.copy(
+                isDelete = true,
+                toast = "Deleted!"
+            )
+        }
+
 
     }
 
